@@ -7,4 +7,3 @@ c = tf.reduce_mean(a, axis=1)
 with tf.Session() as sess:
     print(sess.run(b))
     print(sess.run(c))
-

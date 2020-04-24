@@ -13,7 +13,6 @@ def logloss(y_true, y_pred):
 label = tf.constant(1.0)
 logit = tf.placeholder(dtype=tf.float32, shape=())
 
-
 loss = tf.nn.sigmoid_cross_entropy_with_logits(labels=label, logits=logit)
 log_loss = logloss(label, logit)
 
@@ -25,5 +24,3 @@ with tf.Session() as sess:
     print(sess.run(loss, feed_dict={logit: 0.5}))
     print(sess.run(log_loss, feed_dict={logit: 10000}))
     print(sess.run(w_loss, feed_dict={logit: 0}))
-
-

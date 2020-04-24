@@ -7,4 +7,3 @@ with tf.Session() as sess:
     print(sess.run(a))
     print(sess.run(b))
     print(sess.run(c))
-
