@@ -1,6 +1,5 @@
 import tensorflow as tf
 
-# 
 a = tf.sequence_mask([1, 2, 3], 5)
 b = tf.sequence_mask([[1, 2], [3, 4]])
 
