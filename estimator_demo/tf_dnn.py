@@ -11,7 +11,7 @@ labels = tf.placeholder(shape=[None, 1], dtype=tf.float32)
 features = tf.placeholder(shape=[None, 126], dtype=tf.float32)
 
 
-def neural_net(inputs, initializer=tf.glorot_normal_initializer(), activation=tf.nn.relu):
+def neural_net(inputs, initializer=tf.initializers.glorot_normal, activation=tf.nn.relu):
     h0 = tf.layers.dense(inputs, 50, kernel_initializer=initializer, activation=activation)
     h1 = tf.layers.dense(h0, 20, kernel_initializer=initializer, activation=activation)
     out = tf.layers.dense(h1, 1)
