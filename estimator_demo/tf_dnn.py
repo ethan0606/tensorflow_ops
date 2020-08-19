@@ -1,4 +1,5 @@
 import tensorflow as tf
+
 from util import DataSetIterator
 
 train_filenames = ['/Users/yifanguo/Desktop/tensorflow_ops/data/agaricus/tf_train']
@@ -30,11 +31,11 @@ with tf.Session() as sess:
         try:
             train_batch = sess.run(train_iter)
             test_batch = sess.run(test_iter)
-            sess.run(train_op, feed_dict={features:train_batch['features'],
-                                                 labels:train_batch['label']})
-            test_loss = sess.run(loss_op, feed_dict={features:test_batch['features'],
-                                                 labels:test_batch['label']})
-            print('test batch:%d'%i, 'loss:%f'%test_loss)
+            sess.run(train_op, feed_dict={features: train_batch['features'],
+                                          labels: train_batch['label']})
+            test_loss = sess.run(loss_op, feed_dict={features: test_batch['features'],
+                                                     labels: test_batch['label']})
+            print('test batch:%d' % i, 'loss:%f' % test_loss)
 
             i = i + 1
         except:

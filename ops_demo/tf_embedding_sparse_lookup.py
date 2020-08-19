@@ -1,5 +1,5 @@
-import tensorflow as tf
 import numpy as np
+import tensorflow as tf
 
 example = np.arange(24).reshape(6, 4).astype(np.float32)
 print(example)

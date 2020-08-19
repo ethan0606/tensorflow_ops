@@ -1,4 +1,5 @@
 import tensorflow as tf
+
 from util import DataSetIterator
 
 train_filenames = ['/Users/yifanguo/Desktop/tensorflow_ops/data/agaricus/tf_train']

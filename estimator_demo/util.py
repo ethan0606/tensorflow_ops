@@ -1,4 +1,5 @@
 import os
+
 import tensorflow as tf
 
 
@@ -30,7 +31,6 @@ def parse_tf_example(example_proto, feature_map=None):
 class DataSetIterator:
     @staticmethod
     def get_iter(filenames, batch=10, feature_map=None):
-
         if feature_map is None:
             feature_map = {
                 'label': tf.io.FixedLenFeature(shape=[1], dtype=tf.float32),
@@ -52,6 +52,3 @@ class DataSetIterator:
         ds = ds.map(lambda x: parse_tf_example(x))
         features, label = ds.make_one_shot_iterator().get_next()
         return features, label
-
-
-

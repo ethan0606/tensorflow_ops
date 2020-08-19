@@ -7,4 +7,3 @@ d = tf.multiply(a, b)
 with tf.Session() as sess:
     print(sess.run(c))
     print(sess.run(d))
-
